@@ -9,12 +9,7 @@ This repository contains code and instructions for reproducing results from our 
 <br>
 
 <p align="justify">
-<b>ACT-ALIGN</b> introduces a novel framework for aligning long-tail video question answering tasks with subaction-level supervision. 
-Instead of treating action labels as atomic phrases, we decompose each candidate action into a sequence of visually grounded subactions 
-using a large language model (LLM). We then align these subactions to video frames using dynamic time warping (DTW), enabling fine-grained 
-comparisons between the semantics of the label and the visual content. Our experiments on the ActionAtlas benchmark demonstrate that ACT-ALIGN 
-significantly outperforms traditional baselines that rely on global video representations. This work opens a path for more explainable, 
-temporal alignment-aware models in long-tailed action understanding.
+We address the task of zero-shot fine-grained video classification, where no video examples or temporal annotations are available for unseen action classes. While contrastive vision-language models such as SigLIP demonstrate strong open-set recognition via mean-pooled image-text similarity, they fail to capture the temporal structure critical for distinguishing fine-grained activities. We introduce ActAlign, a zero-shot framework that formulates video classification as sequence alignment. For each class, a large language model generates an ordered sub-action sequence, which is aligned with video frames using Dynamic Time Warping (DTW) in a shared embedding space. Without any video-text supervision or fine-tuning, ActAlign achieves 30.5% accuracy on the extremely challenging ActionAtlas benchmark, where human accuracy is only 61.6%. ActAlign outperforms billion-parameter video-language models while using approximately 8x less parameters. These results demonstrate that structured language priors, combined with classical alignment techniques, offer a scalable and general approach to unlocking the open-set recognition potential of vision-language models for fine-grained video understanding.
 </p>
 
 </details>
