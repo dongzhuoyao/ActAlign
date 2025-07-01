@@ -1,12 +1,23 @@
-# ACT-ALIGN: Fine-Grained Subaction Alignment for Video QA  
+# ActAlign: Zero-Shot Fine-Grained Video Classification via Language-Guided Sequence Alignment
 **[📄 Paper](https://arxiv.org/abs/2506.22967) | [🌐 Project Page](https://amir-aghdam.github.io/act-align/)**  
 
 This repository contains code and instructions for reproducing results from our paper:  
-**"ACT-ALIGN: Fine-Grained Subaction Alignment for Visual Question Answering in Long-Tail Action Datasets"**
+**"ActAlign: Zero-Shot Fine-Grained Video Classification via Language-Guided Sequence Alignment"**
+<details open>
+<summary><strong>🧠 Abstract</strong></summary>
 
-We propose a novel alignment framework that decomposes candidate action labels into visually distinctive subactions using LLMs and performs subaction-wise alignment against videos using DTW.
+<br>
 
----
+<p align="justify">
+<b>ACT-ALIGN</b> introduces a novel framework for aligning long-tail video question answering tasks with subaction-level supervision. 
+Instead of treating action labels as atomic phrases, we decompose each candidate action into a sequence of visually grounded subactions 
+using a large language model (LLM). We then align these subactions to video frames using dynamic time warping (DTW), enabling fine-grained 
+comparisons between the semantics of the label and the visual content. Our experiments on the ActionAtlas benchmark demonstrate that ACT-ALIGN 
+significantly outperforms traditional baselines that rely on global video representations. This work opens a path for more explainable, 
+temporal alignment-aware models in long-tailed action understanding.
+</p>
+
+</details>
 
 ## 🔧 Setup
 All scripts assume Python ≥ 3.8 and require the following Python packages:
